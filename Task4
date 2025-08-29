@@ -1,0 +1,117 @@
+Task4:
+4.a:
+String Address;
+int math = 20+6;
+int CityCode = 9000/3;
+String besked = "Hej med dig!";
+
+4.b
+String Address = "Pontoppidansvej";
+int AddressNum = 20+1;
+int CityCode = 9000/3;
+String besked = "Her bor jeg!";
+
+4.c
+void setup(){
+  String Address = "Pontoppidansvej";
+  int AddressNum = 20+1;
+  int CityCode = 9000/3;
+  String besked = "Her bor jeg!";
+  println("Adresse: "+Address);
+  println("Adresse Nummer: "+AddressNum);
+  println("By Kode: "+CityCode);
+  println("Kommentar: "+besked);
+}
+
+4.d
+String Address = "Mørdrupvej";
+int AddressNum = 45+45+3;
+int CityCode = 9180/3;
+String besked = "Her bor jeg nu!";
+void setup(){
+  println("Adresse: "+Address);
+  println("Adresse Nummer: "+AddressNum);
+  println("By Kode: "+CityCode);
+  println("Kommentar: "+besked);
+}
+
+4.e
+String Address = "Mørdrupvej";
+int AddressNum = 45+45+3;
+int CityCode = 9180/3;
+String besked = "Her bor jeg nu!";
+
+//Nye Tilføjelser
+char HusBogstav = 'b';
+String By = " Espergærde";
+
+void setup(){
+  println("Adresse: "+Address);
+  println("Adresse Nummer: "+AddressNum+HusBogstav);
+  println("By Kode: "+CityCode +By);
+  println("Kommentar: "+besked);
+}
+
+4.f
+String address = "Mørdrupvej";
+int addressNum = 45+45+3;
+int cityCode = 9180/3;
+String besked = "Her bor jeg nu!";
+
+//Nye Tilføjelser
+char husBogstav = 'b';
+String by = " Espergærde";
+
+//4.f,g,h
+float Add1 = cityCode+1;
+float Add2 = addressNum+1;
+
+void setup(){
+  println("Add1: "+Add1+Add2);
+}
+
+4.g
+String address = "Mørdrupvej";
+int addressNum = 45+45+3;
+int cityCode = 9180/3;
+String besked = "Her bor jeg nu!";
+
+//Nye Tilføjelser
+char husBogstav = 'b';
+String by = " Espergærde";
+
+//4.f,g,h
+float Add1 = cityCode+1;
+float Add2 = addressNum+1;
+
+float add3 = cityCode+3;
+float add4 = addressNum+3;
+
+float substract1 = cityCode-1;
+float substract2 = addressNum-1;
+void setup(){
+  println("Add3: "+add3+add4);
+}
+
+4.h
+String address = "Mørdrupvej";
+int addressNum = 45+45+3;
+int cityCode = 9180/3;
+String besked = "Her bor jeg nu!";
+
+//Nye Tilføjelser
+char husBogstav = 'b';
+String by = " Espergærde";
+
+//4.f,g,h
+float Add1 = cityCode+1;
+float Add2 = addressNum+1;
+
+float add3 = cityCode+3;
+float add4 = addressNum+3;
+
+float substract1 = cityCode-1;
+float substract2 = addressNum-1;
+void setup(){
+  println("substract1 :"+substract1+substract2);
+}
