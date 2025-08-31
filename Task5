@@ -1,0 +1,57 @@
+5.a
+int circleSize; // Globale variabler som kan bruges i både setup og draw metoden.
+
+void setup(){
+  size(500,500);
+  circleSize = 50; // Cirklens størrelse
+}
+
+5.b
+int circleSize; 
+int numberOfCircles; // Erklærer variablen "numberOfCircles" globalt, så de kan bruges i både setup og draw.
+
+void setup(){
+  size(500,500); // Canvas Størrelsen
+  circleSize = 50; // Cirkel størrelsen
+  numberOfCircles = 20; // Mængden af cirkler
+}
+
+5.c
+int circleSize;
+int numberOfCircles;
+int x; // Sætter x og y her så de kan bruges i draw uden problemer.
+int y;
+
+void setup(){
+  size(500,500);
+  circleSize = 50;
+  numberOfCircles = 20;
+}
+
+void draw(){
+  x = 20;
+  y = 20;
+}
+
+5.d
+int circleSize;
+int numberOfCircles;
+int x;
+int y;
+int counter1 = 0;
+int counter2 = 0;
+
+void setup(){
+  size(500,500);
+  circleSize = 50;
+  numberOfCircles = 20;
+}
+
+void draw(){
+  x = 25 + counter1 * circleSize; // Cirklerne fortsætter med at blive lavet en efter en.
+  y = 25;
+  ellipse(x,y,circleSize,circleSize); // Laver en cirkel ved brug af variablerne.
+  counter1++; // counter1/2++ gør at cirklerne fortsætter med at blive lavet ved siden af hinanden.
+  counter2++;
+  
+}
