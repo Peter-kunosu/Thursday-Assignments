@@ -1,0 +1,41 @@
+int circleSize;
+int numberOfCircles;
+int x;
+int y;
+int counter1 = 0;
+int counter2 = 0;
+int r;
+int g;
+int b;
+
+void setup(){
+  size(500,500);
+  circleSize = 50;
+  numberOfCircles = 10;
+  r = 255;
+  g = 255;
+  b = 255;
+}
+
+void draw(){
+  x = 25 + counter1 * circleSize; // Cirklerne fortsætter med at blive lavet en efter en.
+  y = 25;
+  r = (int)random(255);
+  g = (int)random(255);
+  b = (int)random(255);
+  ellipse(x,y,circleSize,circleSize); // Laver en cirkel ved brug af variablerne.
+  fill(r,g,b);
+  counter1++; // counter1/2++ gør at cirklerne fortsætter med at blive lavet ved siden af hinanden.
+}
+
+6.a
+har puttet "r, g, b" som globale variabler for at de kan bruges i både setup og draw.
+int r;
+int g;
+int b;
+
+6.b
+Har tildelt "r, g, b" værdien 255 for at de tilsammen giver hvid. Det gør også at den første cirkel altid er hvid.
+
+6.c
+i void draw metoden har jeg lavet r/g/b = (int)random(255); for at hver cirkel får en "random" farve.
