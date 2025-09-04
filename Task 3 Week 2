@@ -1,0 +1,40 @@
+3.a // Denne kode er stortset en spillemaskine da den kun har en 10% chance for success! og 90% chance for failure!. Man trykker 1 gang på play og får et svar der er enten succes! eller Failure!
+int a;
+int b;
+
+void setup (){
+  a = (int)random(0,11);
+  b = (int)random(0,11);
+if(a+b == 10 || a == 10 || b == 10){
+  println("Success!");
+}else {
+    println("Failure!");
+  }
+}
+
+3.b
+int min = 5;
+int max = 10;
+int Summen = min + max;
+
+if(Summen > 10 && (min <= 5 || max <= 5)){
+  println("Success!");
+}else {
+  println("Failure!");
+}
+// man kunne også lave en min/max = (int)random(), hvis man skulle have den til at være fuldstændig selvkørende
+
+3.c
+int x = 12;
+int y = 13;
+int z = 5;
+int summen = x+y+z;
+
+if(summen == 30 && x != 10 && x != 20 && x != 30 && y != 10 && y != 20 && y != 30 && z != 10 && z != 20 && z != 30){
+  println("success!");
+}else {
+  println("Failure!");
+}
+Denne kode printer ud "Success!" når værdierne er som de er (x,y,z) og printer "Failure!" ud når værdierne er = 10,20,30 eller ikke giver 30.
+
+Alle koder er blevet testet og virker.
