@@ -1,0 +1,15 @@
+String name = "Peter";
+int age = 21;
+void setup(){
+  Hello(); //1.b
+  println(toString()); // 1.c og 1.d
+}
+
+public void Hello (){ // 1.b
+  println("Hello from 'public Hello'");
+}
+
+String toString(){ // 1.c og 1.d
+  String s = "my name is "+name+" and i am "+age+" years old.";
+  return s;
+}
