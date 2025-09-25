@@ -1,0 +1,80 @@
+// ------------------- MAIN -------------------
+class Main{
+
+    public static void main(String[] args){
+
+    Team t1 = new Team("Taberne");
+    Team t2 = new Team("Mongo Ungerne");
+    Team t3 = new Team("Kristens Hær");
+    Team t4 = new Team("Vinderne");
+    Team t5 = new Team("Ungarske Krigere");
+    Team t6 = new Team("Stay Focused");
+
+    t1.setRank(2);
+    t1.addPlayer("Axel");
+    t1.addPlayer("Bent");
+    t1.addPlayer("Benja");
+
+    t2.setRank(3);
+    t2.addPlayer("Astrid Lindgren");
+    t2.addPlayer("H.C. Andersen");
+    t2.addPlayer("Brødrene Grimm");
+    
+    t3.setRank(4);
+    t3.addPlayer("Jesus");
+    t3.addPlayer("Gud");
+    t3.addPlayer("Jomfru Maria");
+
+    t4.setRank(1);
+    t4.addPlayer("Christiano Ronaldo");
+    t4.addPlayer("Lionel Messi");
+    t4.addPlayer("Kylian Mbappé");
+
+    t5.setRank(5);
+    t5.addPlayer("Árpád");
+    t5.addPlayer("Kond");
+    t5.addPlayer("Tas");
+
+    t6.setRank(6);
+    t6.addPlayer("Nike");
+    t6.addPlayer("Adidas");
+    t6.addPlayer("New Balance");
+
+    System.out.println(t1.toString());
+    System.out.println(t2.toString());
+    System.out.println(t3.toString());
+    System.out.println(t4.toString());
+    System.out.println(t5.toString());
+    System.out.println(t6.toString());
+
+
+    }
+}
+
+//------------------- TEAM -------------------
+import java.util.ArrayList;
+
+class Team{
+
+    private ArrayList<String> teamPlayerNames = new ArrayList<>();
+
+    private String teamName;
+    private int teamRank;
+    private String player;
+    public Team(String teamName/*, int teamRank, String player*/){
+        this.teamName=teamName;
+        /*this.teamRank=teamRank;
+        this.player=player;*/
+    }
+    public int setRank(int rank){
+        this.teamRank = rank;
+        return this.teamRank;
+    }
+
+    public String toString(){
+        return "\nHold: "+this.teamName +" \nRang: "+this.teamRank +"\nSpillerne: "+teamPlayerNames;
+    }
+    public void addPlayer(String playerName){
+        teamPlayerNames.add(playerName);
+    }
+}
