@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+class Main{
+
+    public static void main (String [] args){
+
+    System.out.print("Indtast dit navn: ");
+    Scanner scanner = new Scanner(System.in);
+    String inputName = scanner.nextLine();
+    System.out.println("Hej med dig: "+inputName);
+    System.out.print("Indtast din alder: ");
+    int alder = scanner.nextInt();
+    System.out.println("Hej "+ inputName +" du er "+ alder +" år gammel!");
+    int retire = 67 - alder;
+    System.out.println("Og du har: "+ retire +" år tilbage før du kan gå på pension!");
+
+    }
+}
