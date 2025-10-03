@@ -1,0 +1,133 @@
+----- main -----
+import java.util.ArrayList;
+
+public class Main {
+
+    public static ArrayList<Room> collectionOfRooms = new ArrayList<>();
+
+    public static void main(String[] args) {
+
+
+        Room livingRoom = new Room(4, 2);
+        Room bathRoom = new Room(2, 1);
+        Room kitchen = new Room(5, 3);
+
+        collectionOfRooms.add(livingRoom);
+        collectionOfRooms.add(bathRoom);
+        collectionOfRooms.add(kitchen);
+
+        Building house = new Building(collectionOfRooms, 2);
+
+        countLampsInBuilding(house);
+        countWindowsInBuilding(house);
+        countRoomsInBuilding(house);
+        isNormal(house);
+
+    }
+
+    public static void countLampsInBuilding(Building b) {
+
+        int sum = 0;
+
+        for (Room room : b.getRooms()) {
+
+            sum = sum + room.getNumberOfLamps();
+
+        }
+        System.out.println("There is " + sum + " lamps in the building.");
+    }
+
+    public static void countWindowsInBuilding(Building b) {
+
+        int sum = 0;
+
+        for (Room room : b.getRooms()) {
+
+            sum = sum + room.getNumberOfWindows();
+
+        }
+        System.out.println("There is " + sum + " windows in the building.");
+    }
+
+    public static void countRoomsInBuilding(Building b) {
+
+        int sum = 0;
+
+        for (Room room : b.getRooms()) {
+
+            sum++;
+
+        }
+        System.out.println("There is " + sum + " rooms in the building.");
+    }
+
+    public static void isNormal(Building b) {
+        boolean moreFloorsThanRooms = (b.getNumberOfFloors() == b.getRooms().size()) || (b.getNumberOfFloors() <= b.getRooms().size());
+        if (moreFloorsThanRooms) {
+            System.out.println("This building can exist!.");
+        } else {
+            System.out.println("There's more floors than rooms...\nThis building is not valid");
+        }
+
+    }
+}
+
+----- building -----
+import java.util.ArrayList;
+
+public class Building {
+
+    private ArrayList<Room> rooms = new ArrayList<>();
+    private int numberOfFloors;
+
+    public Building(ArrayList<Room> rooms, int numberOfFloors) {
+        this.rooms = rooms;
+        this.numberOfFloors = numberOfFloors;
+    }
+
+    public ArrayList<Room> getRooms() {
+        return rooms;
+    }
+
+    public ArrayList<Room> setRooms(ArrayList<Room> rooms) {
+        this.rooms = rooms;
+        return rooms;
+    }
+
+    public int getNumberOfFloors() {
+        return numberOfFloors;
+    }
+
+    public void setNumberOfFloors(int numberOfFloors) {
+        this.numberOfFloors = numberOfFloors;
+    }
+}
+
+----- room -----
+public class Room {
+
+    private int numberOfLamps;
+    private int numberOfWindows;
+
+    public Room(int numberOfLamps, int numberOfWindows) {
+        this.numberOfLamps = numberOfLamps;
+        this.numberOfWindows = numberOfWindows;
+    }
+
+    public int getNumberOfLamps() {
+        return numberOfLamps;
+    }
+
+    public void setNumberOfLamps(int numberOfLamps) {
+        this.numberOfLamps = numberOfLamps;
+    }
+
+    public int getNumberOfWindows() {
+        return numberOfWindows;
+    }
+
+    public void setNumberOfWindows(int numberOfWindows) {
+        this.numberOfWindows = numberOfWindows;
+    }
+
+}
